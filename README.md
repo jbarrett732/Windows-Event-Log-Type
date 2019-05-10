@@ -10,13 +10,16 @@ This package contains type definitions for windows-eventlog ( https://www.npmjs.
 # Example
 ```
 import {EventLog} from 'windows-eventlog';
+
 export class EventLogTest {
+
     public constructor() {
         const eventLog = new EventLog('myService');
-        eventLog.log('info', 'hello', () => { console.log('done'); });
-        eventLog.log('info', 'hello', () => { console.log('done'); });  
-        eventLog.log('info', 'hello', () => { console.log('done'); });  
+        eventLog.log('info',  'hello', () => { console.log('done'); });
+        eventLog.log('warn',  'hello', () => { console.log('done'); });  
+        eventLog.log('error', 'hello', () => { console.log('done'); });  
     }    
+    
 }
 ```
 
